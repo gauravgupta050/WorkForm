@@ -1,6 +1,6 @@
 FROM maven:3.8.5-openjdk-17 AS build
 #WORKDIR /app
-RUN mvn -f /ToDoForm/pom.xml <goal>
+RUN mvn -f /pom.xml <goal>
 COPY . .
 RUN mvn clean package -DskipTests
 
