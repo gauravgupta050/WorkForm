@@ -17,6 +17,6 @@ COPY . .
 # RUN mvn -f /ToDoForm/pom.xml <goal>
 #RUN mvn clean package -DskipTests
 FROM openjdk:17-jdk-slim
-COPY --from=build /target/ToDoForm-0.0.1-SNAPSHOT.jar ToDoForm.jar
+COPY --from=build /target/ToDoForm.jar ToDoForm.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "ToDoForm.jar"]
