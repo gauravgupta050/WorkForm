@@ -16,7 +16,7 @@ WORKDIR /app
 COPY pom.xml ./
 # Pre-fetch dependencies
 RUN mvn dependency:go-offline -B
-COPY src ./src
+
 RUN mvn clean package -DskipTests
 # RUN mvn -f /ToDoForm/pom.xml <goal>
 #RUN mvn clean package -DskipTests
