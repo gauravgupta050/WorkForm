@@ -13,7 +13,7 @@
 
 FROM maven:3.8.5-openjdk-17 AS build
 WORKDIR /app
-RUN mvn -f pom.xml <goal> 
+RUN mvn -f pom.xml clean install
 # Pre-fetch dependencies
 RUN mvn dependency:go-offline -B
 
